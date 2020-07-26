@@ -5,7 +5,10 @@ const hbs = require('hbs');
 const geocode = require('./utils/geocode');
 const weather = require('./utils/weather');
 
+
 const app = express();
+const port = process.env.PORT || 3000;
+
 const publicDir = path.join(__dirname, '../public');
 const hbsViewsDir = path.join(__dirname, '../templates/views');
 const hbspartialsDir = path.join(__dirname, '../templates/partials');
@@ -83,6 +86,6 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log('Listening');
+app.listen(port, () => {
+    console.log('Listening on '+port);
 })
