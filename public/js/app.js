@@ -15,6 +15,7 @@ weatherForm.addEventListener('submit', (event) => {
         <p><b>Location:</b> ${data.location}</p>
         <p><b>Temparature:</b> ${data.temparature}\xB0C</p>
         <p><b>Forecast:</b> ${data.forecast}</p>
+        <img src="${data.icon}"/>
         `;
     })
 })

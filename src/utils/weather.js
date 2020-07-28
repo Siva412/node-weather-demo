@@ -24,7 +24,8 @@ const weatherInfo = (coord, callback) => {
             callback(undefined, {
                 temperature: currentWeather.temperature,
                 description: currentWeather.weather_descriptions[0],
-                location: location.name
+                location: location.name,
+                icon: currentWeather.weather_icons[0]
             });
         });
 };
